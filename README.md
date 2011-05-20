@@ -21,11 +21,11 @@ Site Map
 * Contact (single-column vornado)
 
 Templates:
-* home
 
-* one-column
-* one-column vornado
-* one-column vornado with image banner
+1. home
 
-* two-column
-* two-column shaded
+1. one-column: onecolumn-page.php
+1. one-column vornado: onecolumn-vornado.php
+1. one-column vornado with image banner: onecolumn-images.php
+1. two-column
+1. two-column shaded

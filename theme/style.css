@@ -93,6 +93,7 @@ h1 a, h2 a, h3 a {
 .header .logo {
   width: 143px;
   height: 113px;
+  float:left;
 }
 .header .logo a {
   display: block;
@@ -101,9 +102,17 @@ h1 a, h2 a, h3 a {
   height: 113px;
 }
 .header h2.title {
-  float:right;
+  position: absolute;
   text-align: right;
   font-weight:normal;
+  text-transform: uppercase;
+  right: 0;
+  bottom: 10px;
+}
+.header img.right {
+  position: absolute;
+  right: 0;
+  bottom: 10px;
 }
 
 /* HOME */
@@ -143,6 +152,7 @@ h1 a, h2 a, h3 a {
 .cms .main h1 {
   font-size:16px;
   font-weight:normal;
+  text-transform: uppercase;
 }
 
 /* BROCHURE PAGE */
@@ -165,13 +175,31 @@ h1 a, h2 a, h3 a {
   box-shadow: 3px 3px 5px #666;
 }
 
+/* TWO COLUMN LAYOUTS */
 .left_col img.callout {
+  margin-bottom: 10px;
+  -moz-box-shadow: 2px 2px 5px #666;
+  -webkit-box-shadow: 2px 2px 5px #666;
+  box-shadow: 2px 2px 5px #666;
+}
+
+.left_col .shadedside {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  background-color: #ABA098;
+  color: #fff;
+  padding: 10px;
+  height: 500px;
+  font-family: "Century Gothic";
+  text-transform: uppercase;
+  font-size: 12px;
 }
 
 .left_col .nav {
   font-family: "Century Gothic";
   letter-spacing: .1em;
-  margin-top: 20px;
+  margin-top: 0;
   margin-bottom: 50px;
   font-size: 12px;
   font-weight: normal;
@@ -186,7 +214,7 @@ h1 a, h2 a, h3 a {
   color: #9F8C7F;
   text-transform: uppercase;
 }
-.left_col .nav li.active a,
+.left_col .nav li.current_page_item a,
 .left_col .nav li a:hover {
   color: #685c53;
 }

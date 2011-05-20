@@ -1,7 +1,24 @@
 <div class="grid_1 left_col">
-  <img class="callout" src="images/building.jpg"/>
+  
+<?php if (has_post_thumbnail()):
+  the_post_thumbnail('sidebar', array('class' => 'callout'));
+endif ?>
+
+<?php
+$args = array(
+  'title_li' => false,
+  'sort_column' => 'menu_order',
+  'echo' => false,
+);
+if ($post->post_parent):
+  $children = wp_list_pages(array_merge($args, array('child_of' => $post->post_parent)));
+else:
+  $children = wp_list_pages(array_merge($args, array('child_of' => $post->ID)));
+endif;
+if ($children):
+?>
   <ul class="nav">
-    <li class="active"><a href="#">BUILDING PROFILE</a></li>
-    <li><a href="#">TENANT LIST</a></li>
+  <?php echo $children ?>
   </ul>
+<?php endif ?>
 </div>
