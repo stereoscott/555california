@@ -1,9 +1,9 @@
     <div class="footer grid_4 shade">
       <ul class="nav">
-        <li class="home"><a href="index.html">Home</a></li>
-        <li class="brochure"><a href="brochure.html">E-Brochure</a></li>
-        <li class="vornado"><a href="vornado.html">Vornado</a></li>
-        <li class="contact"><a href="contact.html">Contact</a></li>
+        <li class="home"><a href="<?php echo home_url() ?>">Home</a></li>
+        <li class="brochure"><a href="<?php echo home_url() ?>#2">E-Brochure</a></li>
+        <li class="vornado"><a href="<?php echo site_url('/vornado/') ?>">Vornado</a></li>
+        <li class="contact"><a href="<?php echo site_url('/contact/') ?>">Contact</a></li>
       </ul>      
     </div>
     <div class="copyright grid_4">
