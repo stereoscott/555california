@@ -2,7 +2,13 @@
 
 <script type="text/javascript">
 jQuery(document).ready(function($){
+	var startSlide = 1;
+	if (window.location.hash) {
+		startSlide = window.location.hash.replace('#','');
+	}
+	
 	$('.sliderwrap').slides({
+	  start: startSlide,
 	  container: 'slider',
 		preload: true,
 		preloadImage: 'images/loading.gif',
