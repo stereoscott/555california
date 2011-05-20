@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>555 California Street - San Francisco</title>
+	<!--[if IE]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<link rel="stylesheet" href="grid.css">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.0/jquery.min.js" type="text/javascript"></script>
+  <script src="js/jquery.hoverIntent.minified.js" type="text/javascript"></script>
+  <script src="js/enlarge.js" type="text/javascript"></script>
+  <script src="js/slides.min.jquery.js" type="text/javascript"></script>
+  <script type="text/javascript">
+  jQuery(document).ready(function($){
+		$('.sliderwrap').slides({
+		  container: 'slider',
+			preload: true,
+			preloadImage: 'images/loading.gif',
+			fadeSpeed: 1500,
+			fadeEasing: 'swing',
+			generateNextPrev: false,
+			generatePagination: false,
+			slidesLoaded: function() {
+			  $('#arrow_right').fadeIn();
+			},
+			animationStart: function(current) {
+			  if (current == 1) {
+			    $('#arrow_right').fadeOut();
+			    $('#arrow_left').fadeIn();
+			  } else if (current == 2) {
+			    $('#arrow_left').fadeOut();
+			    $('#arrow_right').fadeIn();
+			  }
+			}
+		});
+	});
+	
+  </script>
+</head>
+<body class="home">
+	<div id="body" class="container_4">
+	  <div class="header shade">
+	    <h3 class="logo"><a href="index.html">555 California Street</a></h3>
+    </div>
+    <div class="main">
+      <div class="sliderwrap">
+        <div class="slider">
+          <div class="slide" id="slide1">
+            <div class="grid_1 rollover top"><img src="images/photo1.png"></div>
+            <div class="grid_1 rollover top"><img src="images/photo2.png"></div>
+            <div class="grid_1 rollover top"><img src="images/photo3.png"></div>
+            <div class="grid_1 rollover top right"><img src="images/photo4.png"></div>
+            
+            <div class="grid_1 rollover bottom"><img src="images/photo5.png"></div>
+            <div class="grid_1 rollover bottom"><img src="images/photo6.png"></div>
+            <div class="grid_1 rollover bottom"><img src="images/photo7.png"></div>
+            <div class="grid_1 rollover bottom right"><img src="images/photo8.png"></div>
+          </div>
+          <div class="slide brochure" id="slide2">
+            
+            <div class="container">
+              <div class="grid_a alpha">
+                <h3><a href="#">retail leasing opportunity</a></h3>
+                <a href="#"><img src="images/555.jpg" style="margin-bottom: 28px"></a>
+
+                <h3><a href="#">proposed usage</a></h3>
+                <a href="#"><img src="images/usage.jpg"></a>
+              </div>
+              <div class="grid_b">
+                <h3><a href="about.html">about 555 california</a></h3>
+                <a href="about.html"><img src="images/exterior.jpg"></a>
+              </div>
+              <div class="grid_c omega">
+                <h3><a href="#">vicinity highlights</a></h3>
+                <a href="#"><img src="images/map.jpg" style="margin-bottom: 17px"></a>
+
+                <div class="col_half alpha">
+                  <h3><a href="#">virtual tour</a></h3>
+                  <a href="#"><img src="images/virtualtour.jpg"></a>
+                </div>
+                <div class="col_half omega">
+                  <h3><a href="#">sustainability</a></h3>
+                  <a href="#"><img src="images/sustainability.jpg"></a>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+        <div class="edge transparent" id="arrow_left" style="display:none">
+          <a href="#" class="arrow prev">&lt;</a>
+        </div>
+        <div class="edge wide transparent" id="arrow_right" style="display:none">
+          <a href="#" class="explore next">EXPLORE</a> <a href="#" class="arrow next">&gt;</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer grid_4 shade">
+      <ul class="nav">
+        <li class="home"><a href="index.html">Home</a></li>
+        <li class="brochure"><a href="brochure.html">E-Brochure</a></li>
+        <li class="vornado"><a href="vornado.html">Vornado</a></li>
+        <li class="contact"><a href="contact.html">Contact</a></li>
+      </ul>      
+    </div>
+    <div class="copyright grid_4">
+      © 2011 Vornado Realty Trust 
+      <div style="text-indent:-9999em">
+        site by <a href="http://loft22.wordpress.com/" target="_blank">LOFT22creative</a> with <a href="http://stereointeractive.com" target="_blank" id="#stereo">stereo <span>web design services</span></a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
