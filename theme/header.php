@@ -21,7 +21,6 @@
 	// Add a page number if necessary:
 	if ( $paged >= 2 || $page >= 2 )
 		echo ' | ' . sprintf( __( 'Page %s', '555california' ), max( $paged, $page ) );
-
 ?></title>
 <!--[if IE]>
 	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -30,13 +29,9 @@
 <link rel="stylesheet" type="text/css" media="all" href="<?php echo get_stylesheet_directory_uri() ?>/grid.css">
 <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" >
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.0/jquery.min.js" type="text/javascript"></script>
-<script src="js/jquery.hoverIntent.minified.js" type="text/javascript"></script>
-<script src="js/enlarge.js" type="text/javascript"></script>
-<script src="js/slides.min.jquery.js" type="text/javascript"></script>
+<?php wp_head() ?>
 </head>
-<body class="interior cms">
+<body class="<?php echo is_home() ? 'home' : 'interior cms' ?>">
 	<div id="body" class="container_4">
 	  <div class="header">
 	    <h3 class="logo"><a href="<?php echo home_url() ?>">555 California Street</a></h3>

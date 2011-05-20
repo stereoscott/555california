@@ -105,12 +105,20 @@ h1 a, h2 a, h3 a {
   text-align: right;
   font-weight:normal;
 }
+
+/* HOME */
+.home .header {
+  background-color: #685c53;
+}
+
 .home .header .logo {
   background: url(images/logo.png) 0 0 no-repeat;
   position: absolute;
   left:435px;
   top:10px;
 }
+
+/* INTERIOR */
 .interior .header {
   height: 145px;
 }
