@@ -310,7 +310,7 @@
 			$('.' + option.container, elem).css({
 				display: 'block'
 			});
-
+			
 			// if autoHeight true, get and set height of first slide
 			if (option.autoHeight) {
 				control.children().css({
@@ -458,6 +458,7 @@
 			
 			// click handling 
 			$('a.link', elem).click(function(){
+			  console.log('clicked');
 				// pause slideshow
 				if (option.play) {
 					 pause();

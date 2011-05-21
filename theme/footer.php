@@ -1,7 +1,7 @@
     <div class="footer grid_4 shade">
       <ul class="nav">
         <li class="home"><a href="<?php echo home_url() ?>">Home</a></li>
-        <li class="brochure"><a href="<?php echo home_url() ?>#2">E-Brochure</a></li>
+        <li class="brochure"><a href="<?php echo site_url('/e-brochure/') ?>">E-Brochure</a></li>
         <li class="vornado"><a href="<?php echo site_url('/vornado/') ?>">Vornado</a></li>
         <li class="contact"><a href="<?php echo site_url('/contact/') ?>">Contact</a></li>
       </ul>      

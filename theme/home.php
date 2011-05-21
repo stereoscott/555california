@@ -6,18 +6,25 @@ jQuery(document).ready(function($){
 	if (window.location.hash) {
 		startSlide = window.location.hash.replace('#','');
 	}
+	console.log(startSlide);
 	
 	$('.sliderwrap').slides({
-	  start: startSlide,
 	  container: 'slider',
-		preload: true,
-		preloadImage: 'images/loading.gif',
+	  preload: true,
+		preloadImage: '<?php bloginfo('template_directory'); ?>/images/loading.gif',
 		fadeSpeed: 1500,
 		fadeEasing: 'swing',
 		generateNextPrev: false,
 		generatePagination: false,
+		start: startSlide,
 		slidesLoaded: function() {
-		  $('#arrow_right').fadeIn();
+		  $('.slider div.slide:eq('+(startSlide-1)+')').fadeIn();
+		  //control.find('img:eq(' + start + ')')
+		  if (startSlide == 1) {
+		    $('#arrow_right').fadeIn();
+		  } else {
+		    $('#arrow_left').show();
+		  }
 		},
 		animationStart: function(current) {
 		  if (current == 1) {
@@ -27,34 +34,39 @@ jQuery(document).ready(function($){
 		    $('#arrow_left').fadeOut();
 		    $('#arrow_right').fadeIn();
 		  }
+		},
+		animationComplete: function(current) {
+		  window.location.hash = '#' + current;
 		}
 	});
+	
+	
 });
 
 </script>
-
+  
 		<div class="main">
-      
       <div class="sliderwrap">
         <div class="slider">
+          <!-- slide 1 -->
           <div class="slide" id="slide1">
             <div class="grid_1 rollover top"><img src="<?php bloginfo('template_directory'); ?>/images/photo1.png"></div>
             <div class="grid_1 rollover top"><img src="<?php bloginfo('template_directory'); ?>/images/photo2.png"></div>
             <div class="grid_1 rollover top"><img src="<?php bloginfo('template_directory'); ?>/images/photo3.png"></div>
             <div class="grid_1 rollover top right"><img src="<?php bloginfo('template_directory'); ?>/images/photo4.png"></div>
-            
             <div class="grid_1 rollover bottom"><img src="<?php bloginfo('template_directory'); ?>/images/photo5.png"></div>
             <div class="grid_1 rollover bottom"><img src="<?php bloginfo('template_directory'); ?>/images/photo6.png"></div>
             <div class="grid_1 rollover bottom"><img src="<?php bloginfo('template_directory'); ?>/images/photo7.png"></div>
             <div class="grid_1 rollover bottom right"><img src="<?php bloginfo('template_directory'); ?>/images/photo8.png"></div>
           </div>
+          <!-- end slide 1 -->
+          
+          <!-- slide 2 -->
           <div class="slide brochure" id="slide2">
-            
             <div class="container">
               <div class="grid_a alpha">
                 <h3><a href="<?php echo site_url('/retail-leasing-opportunity/mezzanine-level-overview/') ?>">retail leasing opportunity</a></h3>
                 <a href="<?php echo site_url('/retail-leasing-opportunity/mezzanine-level-overview/') ?>"><img src="<?php bloginfo('template_directory'); ?>/images/555.jpg" style="margin-bottom: 28px"></a>
-
                 <h3><a href="<?php echo site_url('/retail-leasing-opportunity/proposed-usage/') ?>">proposed usage</a></h3>
                 <a href="<?php echo site_url('/retail-leasing-opportunity/proposed-usage/') ?>"><img src="<?php bloginfo('template_directory'); ?>/images/usage.jpg"></a>
               </div>
@@ -65,7 +77,6 @@ jQuery(document).ready(function($){
               <div class="grid_c omega">
                 <h3><a href="<?php echo site_url('/vicinity-highlights/') ?>">vicinity highlights</a></h3>
                 <a href="<?php echo site_url('/vicinity-highlights/') ?>"><img src="<?php bloginfo('template_directory'); ?>/images/map.jpg" style="margin-bottom: 17px"></a>
-
                 <div class="col_half alpha">
                   <h3><a href="<?php echo site_url('/virtual-tour/') ?>">virtual tour</a></h3>
                   <a href="<?php echo site_url('/virtual-tour/') ?>"><img src="<?php bloginfo('template_directory'); ?>/images/virtualtour.jpg"></a>
@@ -76,8 +87,9 @@ jQuery(document).ready(function($){
                 </div>
               </div>
             </div>
-            
           </div>
+          <!-- end slide two -->
+          
         </div>
         <div class="edge transparent" id="arrow_left" style="display:none">
           <a href="#" class="arrow prev">&lt;</a>
