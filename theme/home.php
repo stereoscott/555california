@@ -5,6 +5,10 @@ jQuery(document).ready(function($){
 	var startSlide = 1;
 	if (window.location.hash) {
 		startSlide = window.location.hash.replace('#','');
+		if (startSlide == 2) {
+		  $('.sliderwrap').animate({top:'26px'});
+		  $('.sliderwrap .edge a.arrow').animate({marginTop:'175px'});
+		}
 	}
 	console.log(startSlide);
 	
@@ -17,6 +21,7 @@ jQuery(document).ready(function($){
 		generateNextPrev: false,
 		generatePagination: false,
 		start: startSlide,
+		autoHeight: true,
 		slidesLoaded: function() {
 		  $('.slider div.slide:eq('+(startSlide-1)+')').fadeIn();
 		  //control.find('img:eq(' + start + ')')
@@ -28,9 +33,13 @@ jQuery(document).ready(function($){
 		},
 		animationStart: function(current) {
 		  if (current == 1) {
+		    $('.sliderwrap').animate({top:'26px'});
+		    $('.sliderwrap .edge a.arrow').animate({marginTop:'175px'});
 		    $('#arrow_right').fadeOut();
 		    $('#arrow_left').fadeIn();
 		  } else if (current == 2) {
+		    $('.sliderwrap').animate({top:'60px'});
+		    $('.sliderwrap .edge a.arrow').animate({marginTop:'145px'});
 		    $('#arrow_left').fadeOut();
 		    $('#arrow_right').fadeIn();
 		  }
@@ -60,7 +69,7 @@ jQuery(document).ready(function($){
             <div class="grid_1 rollover bottom right"><img src="<?php bloginfo('template_directory'); ?>/images/photo8.png"></div>
             <!-- end slide 1 -->
           </div>
-          
+        
           <div class="slide brochure" id="slide2">
             <!-- slide 2 -->
             <div class="container">
@@ -86,10 +95,11 @@ jQuery(document).ready(function($){
                   <a href="<?php echo site_url('/sustainability/') ?>"><img src="<?php bloginfo('template_directory'); ?>/images/sustainability.jpg"></a>
                 </div>
               </div>
+              <br class="clear">
             </div>
             <!-- end slide two -->
           </div>
-          
+        
         </div>
         <div class="edge transparent" id="arrow_left" style="display:none">
           <a href="#" class="arrow prev">&lt;</a>
@@ -97,9 +107,7 @@ jQuery(document).ready(function($){
         <div class="edge wide transparent" id="arrow_right" style="display:none">
           <a href="#" class="explore next">EXPLORE</a> <a href="#" class="arrow next">&gt;</a>
         </div>
-      </div>
-      
-      
+      </div>      
     </div>
 
 <?php get_footer(); ?>
