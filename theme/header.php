@@ -31,7 +31,7 @@
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 <?php wp_head() ?>
 </head>
-<body class="<?php echo is_home() ? 'home' : 'interior cms' ?>">
+<body <?php body_class(); ?>>
 	<div id="body" class="container_4">
 	  <div class="header">
 	    <h3 class="logo"><a href="<?php echo home_url() ?>">555 California Street</a></h3>

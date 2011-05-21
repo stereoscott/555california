@@ -48,8 +48,8 @@ jQuery(document).ready(function($){
 		<div class="main">
       <div class="sliderwrap">
         <div class="slider">
-          <!-- slide 1 -->
           <div class="slide" id="slide1">
+            <!-- slide 1 -->
             <div class="grid_1 rollover top"><img src="<?php bloginfo('template_directory'); ?>/images/photo1.png"></div>
             <div class="grid_1 rollover top"><img src="<?php bloginfo('template_directory'); ?>/images/photo2.png"></div>
             <div class="grid_1 rollover top"><img src="<?php bloginfo('template_directory'); ?>/images/photo3.png"></div>
@@ -58,11 +58,11 @@ jQuery(document).ready(function($){
             <div class="grid_1 rollover bottom"><img src="<?php bloginfo('template_directory'); ?>/images/photo6.png"></div>
             <div class="grid_1 rollover bottom"><img src="<?php bloginfo('template_directory'); ?>/images/photo7.png"></div>
             <div class="grid_1 rollover bottom right"><img src="<?php bloginfo('template_directory'); ?>/images/photo8.png"></div>
+            <!-- end slide 1 -->
           </div>
-          <!-- end slide 1 -->
           
-          <!-- slide 2 -->
           <div class="slide brochure" id="slide2">
+            <!-- slide 2 -->
             <div class="container">
               <div class="grid_a alpha">
                 <h3><a href="<?php echo site_url('/retail-leasing-opportunity/mezzanine-level-overview/') ?>">retail leasing opportunity</a></h3>
@@ -87,8 +87,8 @@ jQuery(document).ready(function($){
                 </div>
               </div>
             </div>
+            <!-- end slide two -->
           </div>
-          <!-- end slide two -->
           
         </div>
         <div class="edge transparent" id="arrow_left" style="display:none">

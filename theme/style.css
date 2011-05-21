@@ -123,42 +123,42 @@ h1 a, h2 a, h3 a {
 .home .header .logo {
   background: url(images/logo.png) 0 0 no-repeat;
   position: absolute;
-  left:435px;
-  top:10px;
+  left:424px;
+  top:10px; 
+  margin: 0;
+}
+
+.home .main {
+  margin: 0;
+  border: none;
+  padding: 0;
 }
 
 /* INTERIOR */
-.interior .header {
-  height: 145px;
-}
-.interior .header .logo {
+.header .logo {
   margin-left:24px;
   background: url(images/logo_white.png) 0 0 no-repeat;
 }
-.interior .main {
-  margin-left: 24px;
+
+.container_4 .grid_1 {
+  /* width: 226px; */
 }
-.interior .container_4 .grid_1 {
-  width: 226px;
-}
-.interior .container_4 .wide .grid_1 {
+.container_4 .wide .grid_1 {
 	width:340px;
 }
-.interior .container_4 .wide .grid_3 {
+.container_4 .wide .grid_3 {
 	width:630px;
+}
+.main {
+  margin-left: 24px;
+  border-top: 2px solid #685c53;
+  padding-top: 15px;
 }
 .main p {
   line-height:1.5em;
   margin-bottom:1em;
 }
-.cms .main
-{
-  border-top: 2px solid #685c53;
-  padding-top: 15px;
-  /*height:450px;*/
-}
-
-.cms .main h1 {
+.main h1 {
   font-size:16px;
   font-weight:normal;
   text-transform: uppercase;
