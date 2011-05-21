@@ -33,7 +33,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
-	font-family: arial, helvetica, sans-serif;
+	font-family: "century gothic", sans-serif;
 }
 ol, ul {
 	list-style: none;
@@ -141,7 +141,16 @@ h1 a, h2 a, h3 a {
 .interior .container_4 .grid_1 {
   width: 226px;
 }
-
+.interior .container_4 .wide .grid_1 {
+	width:340px;
+}
+.interior .container_4 .wide .grid_3 {
+	width:630px;
+}
+.main p {
+  line-height:1.5em;
+  margin-bottom:1em;
+}
 .cms .main
 {
   border-top: 2px solid #685c53;
@@ -153,6 +162,7 @@ h1 a, h2 a, h3 a {
   font-size:16px;
   font-weight:normal;
   text-transform: uppercase;
+  margin-bottom: 1em;
 }
 
 /* BROCHURE PAGE */
