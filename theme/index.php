@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-		<div class="main">
+		<div class="main narrow">
       
       <?php get_sidebar() ?>
 
@@ -10,6 +10,7 @@
         <?php get_template_part('loop', 'index') ?>
       </div>
       
+       <div class="clear"></div>
     </div>
 
 <?php get_footer(); ?>

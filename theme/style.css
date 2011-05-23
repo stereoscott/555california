@@ -34,6 +34,8 @@ footer, header, hgroup, menu, nav, section {
 body {
 	line-height: 1;
 	font-family: "century gothic", sans-serif;
+  min-width: 1000px;
+  background-color: #fff;
 }
 ol, ul {
 	list-style: none;
@@ -51,10 +53,11 @@ table {
 	border-spacing: 0;
 }
 
-body {
-  background-color: #fff;
+.container_4 {
+	margin-left: auto;
+	margin-right: auto;
+	width: 1000px;
 }
-
 .shade {
   background-color: #685c53;
   color: #fff;
@@ -208,6 +211,7 @@ h1 a, h2 a, h3 a {
 }
 #arrow_left a.arrow {
   background-image:url(images/arrow_left.gif);
+  margin-top: 175px;
   float:left;
 }
 #arrow_right a.arrow {
@@ -232,24 +236,25 @@ h1 a, h2 a, h3 a {
 
 /* INTERIOR */
 .header .logo {
-  margin-left:24px;
   background: url(images/logo_white.png) 0 0 no-repeat;
 }
 
-.container_4 .grid_1 {
-  /* width: 226px; */
-}
 .container_4 .wide .grid_1 {
 	width:340px;
 }
 .container_4 .wide .grid_3 {
 	width:630px;
 }
+
+.container_4 .narrow .grid_1 {
+  width: 210px;
+}
+
 .main {
-  margin-left: 24px;
   border-top: 2px solid #685c53;
   padding-top: 15px;
 }
+
 .main p {
   line-height:1.5em;
   margin-bottom:1em;
@@ -261,24 +266,23 @@ h1 a, h2 a, h3 a {
   margin-bottom: 1em;
 }
 
-/* BROCHURE PAGE */
-.brochure h3
+/* IMAGE BANNER PAGE */
+.page-template-onecolumn-banner-php .main {
+  border-top: none;
+}
+
+/* NEWSPAPER PAGE */
+.newspaper h3
 {
   border-top: 2px solid #685c53;
   padding-top: 5px;
   margin-bottom: 10px;
 }
-.brochure h3 a:hover {
+.newspaper h3 a:hover {
   color: #332D29;
 }
-.brochure .container {
+.newspaper .container {
   padding-left:28px;
-}
-
-.brochure .container a:hover img {
-  -moz-box-shadow: 3px 3px 5px #666;
-  -webkit-box-shadow: 3px 3px 5px #666;
-  box-shadow: 3px 3px 5px #666;
 }
 
 /* TWO COLUMN LAYOUTS */
@@ -289,6 +293,34 @@ h1 a, h2 a, h3 a {
   box-shadow: 2px 2px 5px #666;
 }
 
+.container_4 .shaded .grid_3 {
+  margin-left: 30px;
+  width:650px;
+}
+
+.newspaper a.sepia {
+  display:block;
+}
+#link_retail {
+  
+}
+#link_proposed {
+  
+}
+#link_about {
+  
+}
+#link_vicinity {
+  
+}
+#link_tour {
+  
+}
+#link_sustainability
+{
+  
+}
+
 .left_col .shadedside {
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
@@ -296,7 +328,7 @@ h1 a, h2 a, h3 a {
   background-color: #ABA098;
   color: #fff;
   padding: 10px;
-  height: 500px;
+  height: 275px;
   font-family: "Century Gothic";
   text-transform: uppercase;
   font-size: 12px;
@@ -328,56 +360,101 @@ h1 a, h2 a, h3 a {
   margin-top: 60px;
   height: 46px;
   position:relative;
+  display:block;
+  float:none;
 }
 .footer ul.nav {
   display: block;
-  position:absolute;
-  top:18px;
-  left:180px;
-  height:10px;
+  margin-left:150px;
+  height:46px;
 }
 .footer ul.nav li {
+  postion: relative;
   list-style: none;
   display: block;
   float: left;
-  padding-right: 100px;
-  height:13px;
-  width:85px;
-  background-position: 0 0;
-  background-repeat: no-repeat;
-}
-ul.nav li.home {
-  width: 50px;
-  background-image: url(images/button_home.png);
-}
-ul.nav li.brochure {
-  width: 114px;
-  background-image: url(images/button_brochure.png);
-}
-ul.nav li.vornado {
-  width: 85px;
-  background-image: url(images/button_vornado.png);
-}
-ul.nav li.contact {
-  width: 82px;
-  background-image: url(images/button_contact.png);
+  height:46px;
 }
 .footer .nav a {
-  height:11px;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  height:12px;
+  margin-top:18px;
+  margin-right: 118px;
   display:block;
   color: #fff;
   text-transform: uppercase;
   text-decoration: none;
   text-indent: -9999px;
 }
+ul.nav li.home a{
+  width: 50px;
+  background-image: url(images/button_home.png);
+} 
+ul.nav li.brochure a{
+  width: 114px;
+  background-image: url(images/button_brochure.png);
+}
+ul.nav li.vornado a{
+  width: 85px;
+  padding-right: 0;
+  background-image: url(images/button_vornado.png);
+}
+ul.nav li.vornado a:hover{
+  border:none;
+}
+ul.nav li.contact a{
+  width: 82px;
+  background-image: url(images/button_contact.png);
+}
 .footer .nav a:hover {
   border-bottom: 2px solid #fff;
 }
+.footer ul.nav li ul {
+  display:none;
+  z-index:10;
+  background-color: #A29D98;
+  position:relative;
+  left:-36px;
+  top:16px;
+  width: 162px;
+  padding: 5px 0; 
+}
+.footer ul.nav li.hover ul {
+  display: block;
+}
+.footer ul.nav li ul li {
+  display: block;
+  float: none;
+  height: 14px;
+  padding: 5px 0;
+  width: 162px;
+}
+
+.footer ul.nav li ul li a {
+  background-image: none;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  text-align: center;
+  font-size: 14px;
+  font-wieight: bold;
+  display: block;
+  float:none;
+  text-indent: 0;
+  height: 20px;
+}
+.footer ul.nav li ul li a:hover {
+  color: #51473F;
+  border: none;
+}
+
 .copyright {
   display:block;
   font-size:10px;
   color: #333;
   padding-top:10px;
+  padding-bottom: 60px;
 }
 .copyright a {
   text-decoration: none;

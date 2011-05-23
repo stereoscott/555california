@@ -15,6 +15,7 @@ if (function_exists('add_theme_support')) {
 }
 
 if (function_exists('add_image_size')) {
+  add_image_size('banner', 1000, 180, false);
   add_image_size('sidebar', 176, 1000, false);
   add_image_size('sidebar-wide', 300, 1000, false);
 }

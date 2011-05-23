@@ -30,13 +30,26 @@
 <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" >
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 <?php wp_head() ?>
+<script>
+jQuery(document).ready(function($) {
+  $('.footer .nav li').hover(
+    function () {
+      $(this).addClass("hover");
+    },
+    function () {
+      $(this).removeClass("hover");
+    }
+  );
+});
+</script>
+
 </head>
 <body <?php body_class(); ?>>
 	<div id="body" class="container_4">
 	  <div class="header">
 	    <h3 class="logo"><a href="<?php echo home_url() ?>">555 California Street</a></h3>
 	    <?php if (is_page()): ?>
-	    <?php   if (is_page_template('onecolumn-vornado.php')): ?>
+	    <?php   if (is_page_template('onecolumn-vornado.php') || is_page_template('onecolumn-banner.php')): ?>
 	      <img class="right" src="<?php bloginfo('template_directory'); ?>/images/vornado.gif" alt="Vornado Realty Trust">
 	    <?php   else: ?> 
 	    <h2 class="title">
