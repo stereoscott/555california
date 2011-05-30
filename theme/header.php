@@ -47,13 +47,18 @@ jQuery(document).ready(function($) {
 <body <?php body_class(); ?>>
 	<div id="body" class="container_4">
 	  <div class="header">
-	    <h3 class="logo"><a href="<?php echo home_url() ?>">555 California Street</a></h3>
+	    <h3 class="logo"><a href="<?php echo home_url() ?>/#2">555 California Street</a></h3>
 	    <?php if (is_page()): ?>
 	    <?php   if (is_page_template('onecolumn-vornado.php') || is_page_template('onecolumn-banner.php')): ?>
 	      <img class="right" src="<?php bloginfo('template_directory'); ?>/images/vornado.gif" alt="Vornado Realty Trust">
 	    <?php   else: ?> 
 	    <h2 class="title">
-	      <?php echo $post->post_parent ? get_the_title($post->post_parent) : single_post_title(); ?> </h2>
+	      <?php if ($post->post_parent): ?>
+	        <a href="<?php echo get_permalink($post->post_parent) ?>"><?php echo get_the_title($post->post_parent) ?></a>
+	      <?php else: ?>
+	        <?php echo single_post_title() ?>
+	      <?php endif ?>
+	    </h2>
 	    <?php   endif ?>
 	    <?php endif ?>
     </div>

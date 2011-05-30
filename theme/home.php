@@ -100,12 +100,12 @@
               <div class="grid_a alpha">
                 <h3><a href="<?php echo site_url('/retail-leasing-opportunity/mezzanine-level-overview/') ?>">retail leasing opportunity</a></h3>
                 <a class="sepia" id="link_retail" href="<?php echo site_url('/retail-leasing-opportunity/mezzanine-level-overview/') ?>"><img src="<?php bloginfo('template_directory'); ?>/images/555.jpg" style="margin-bottom: 28px"></a>
-                <h3><a href="<?php echo site_url('/retail-leasing-opportunity/proposed-usage/') ?>">proposed usage</a></h3>
-                <a class="sepia" id="link_proposed" href="<?php echo site_url('/retail-leasing-opportunity/proposed-usage/') ?>"><img src="<?php bloginfo('template_directory'); ?>/images/usage.jpg"></a>
+                <h3><a href="<?php echo site_url('/retail-leasing-opportunity/proposed-usage/dininghospitality/') ?>">proposed usage</a></h3>
+                <a class="sepia" id="link_proposed" href="<?php echo site_url('/retail-leasing-opportunity/proposed-usage/dininghospitality/') ?>"><img src="<?php bloginfo('template_directory'); ?>/images/usage.jpg"></a>
               </div>
               <div class="grid_b">
-                <h3><a href="<?php echo site_url('/about/') ?>">about 555 california</a></h3>
-                <a class="sepia" id="link_about" href="<?php echo site_url('/about/') ?>"><img src="<?php bloginfo('template_directory'); ?>/images/exterior.jpg"></a>
+                <h3><a href="<?php echo site_url('/about/building-profile/') ?>">about 555 california</a></h3>
+                <a class="sepia" id="link_about" href="<?php echo site_url('/about/building-profile/') ?>"><img src="<?php bloginfo('template_directory'); ?>/images/exterior.jpg"></a>
               </div>
               <div class="grid_c omega">
                 <h3><a href="<?php echo site_url('/vicinity-highlights/') ?>">vicinity highlights</a></h3>

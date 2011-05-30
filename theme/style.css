@@ -52,6 +52,12 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+strong {
+  font-weight: bold;
+}
+em {
+  font-style: italic;
+}
 
 .container_4 {
 	margin-left: auto;
@@ -111,6 +117,7 @@ h1 a, h2 a, h3 a {
   text-transform: uppercase;
   right: 0;
   bottom: 10px;
+  font-size: 1em;
 }
 .header img.right {
   position: absolute;
@@ -253,6 +260,7 @@ h1 a, h2 a, h3 a {
 .main {
   border-top: 2px solid #685c53;
   padding-top: 15px;
+  font-size: 14px;
 }
 
 .main p {
@@ -264,6 +272,14 @@ h1 a, h2 a, h3 a {
   font-weight:normal;
   text-transform: uppercase;
   margin-bottom: 1em;
+}
+.hentry ul {
+  list-style: disc;
+  margin-left: 1.5em;
+}
+.hentry ul li, .hentry table {
+  line-height: 1.5em;
+  margin-bottom: .5em;
 }
 
 /* IMAGE BANNER PAGE */
@@ -291,6 +307,12 @@ h1 a, h2 a, h3 a {
   -moz-box-shadow: 2px 2px 5px #666;
   -webkit-box-shadow: 2px 2px 5px #666;
   box-shadow: 2px 2px 5px #666;
+}
+
+.page-id-71 .left_col img.callout {
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
 }
 
 .container_4 .shaded .grid_3 {
@@ -328,10 +350,10 @@ h1 a, h2 a, h3 a {
   background-color: #ABA098;
   color: #fff;
   padding: 10px;
-  height: 275px;
+  min-height: 275px;
   font-family: "Century Gothic";
-  text-transform: uppercase;
   font-size: 12px;
+  line-height: 16px;
 }
 
 .left_col .nav {
