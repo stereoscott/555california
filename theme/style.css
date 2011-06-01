@@ -196,7 +196,7 @@ h1 a, h2 a, h3 a {
   background-color:#000;
 }
 .sliderwrap .edge.wide {
-  width: 100px;
+  width: 125px;
 }
 .sliderwrap .edge .arrow {
   position:relative;
@@ -228,10 +228,10 @@ h1 a, h2 a, h3 a {
 .sliderwrap .edge a.explore {
   position:absolute;
   display:block;
-  top: 161px;
-  left: 10px;
-  font-size:12px;
-  line-height:12px;
+  top: 156px;
+  left: 20px;
+  font-size:18px;
+  line-height:18px;
   font-weight:bold;
   color:#fff;
   text-decoration:none;
@@ -280,6 +280,13 @@ h1 a, h2 a, h3 a {
 .hentry ul li, .hentry table {
   line-height: 1.5em;
   margin-bottom: .5em;
+}
+.hentry a {
+  color: #685C53;
+  text-decoration: underline;
+}
+.hentry a:hover {
+  color: #564A41;
 }
 
 /* IMAGE BANNER PAGE */

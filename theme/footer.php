@@ -14,7 +14,7 @@
     <div class="copyright">
       © 2011 Vornado Realty Trust 
       <div style="float:right">
-        design by <a href="http://loft22.wordpress.com/" target="_blank">LOFT22creative</a>
+        <a href="http://www.555cal.com" target="_blank">www.555cal.com</a> | <a href="http://www.vno.com" target="_blank">www.vno.com</a> | design by <a href="http://loft22.wordpress.com/" target="_blank">LOFT22creative</a>
       </div>
     </div>
   </div>
