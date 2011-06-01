@@ -394,7 +394,7 @@ h1 a, h2 a, h3 a {
 }
 .footer ul.nav {
   display: block;
-  margin-left:150px;
+  margin-left:140px;
   height:46px;
 }
 .footer ul.nav li {
@@ -417,7 +417,7 @@ h1 a, h2 a, h3 a {
   text-indent: -9999px;
 }
 ul.nav li.home a{
-  width: 50px;
+  width: 74px;
   background-image: url(images/button_home.png);
 } 
 ul.nav li.brochure a{

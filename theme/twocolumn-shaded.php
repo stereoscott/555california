@@ -20,8 +20,7 @@ get_header(); ?>
            echo '<a href="' . $large_image_url[0] . '" title="' . the_title_attribute('echo=0') . '" >';
            the_post_thumbnail('feature', array());
            echo '</a>';
-         endif;
-         ?>
+         endif; ?>
         
       </div>
 
