@@ -1,6 +1,19 @@
     <div class="footer shade">
       <ul class="nav">
-        <li class="home"><a href="<?php echo home_url() ?>/#2">Home</a></li>
+        <?php if (is_home()): ?>
+        <li class="home"><a href="#2" id="home_footer">Explore</a></li>
+        <script type="text/javascript">
+          (function($) {
+            $('#home_footer').click(function(evt) {
+              if ($('#slide1').is(':visible')) {
+                $('#arrow_right a.explore').click();
+              }
+            });
+          })(jQuery);
+        </script>
+        <?php else: ?>
+        <li class="home"><a href="<?php echo home_url() ?>/#2">Explore</a></li>
+        <?php endif ?>
         <li class="brochure"><a href="<?php echo site_url('/e-brochure/') ?>">E-Brochure</a></li>
         <li class="vornado"><a href="<?php echo site_url('/vornado/about-vornado/') ?>">Vornado</a>
           <ul>
